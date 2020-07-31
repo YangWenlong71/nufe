@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cc.nufe.sfem.sfem.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme"
+        app:title="@string/app_name"
+        app:titleTextColor="#ffffff" />
+
+    <LinearLayout
+        android:background="#20B2AA"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/pb_progressbar"
+            style="@style/StyleProgressBarMini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_progressbar_bg"
+            android:progress="1" />
+
+        <TextView
+
+            android:id="@+id/idnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:text="当前"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+
+
+    <cc.nufe.sfem.sfem.uiView.VerticalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_updown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/view_border_c0"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/nc_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="上一题"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#ffffff" />
+
+                <TextView
+                    android:id="@+id/nc_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="下一题"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="继续"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/nc_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单选"
+                    android:textColor="#20B2AA"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_qq"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="【QQ Group】"
+                    android:textColor="#20B2AA"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#20B2AA"
+
+                />
+
+
+
+
+            <TextView
+                android:id="@+id/nc_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_question"
+                android:drawablePadding="10dp"
+                android:padding="7dp"
+                android:text="标志着布雷顿森林体系开始动摇的是"
+                android:textColor="#2c2c2c"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <include
+                layout="@layout/danxuan"
+                android:visibility="gone"
+
+                />
+
+            <include
+                layout="@layout/duoxuan"
+
+                android:visibility="gone" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="1dp"
+                app:contentPadding="0dp">
+
+                <LinearLayout
+                    android:background="@drawable/ic_bg"
+                    android:id="@+id/ll_correct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/nc_correct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="美元危机"
+                        android:textColor="#04B431"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nc_response"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="60dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#2c2c2c"
+                        android:text="@string/app_name"
+                        android:textSize="12dp"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </cc.nufe.sfem.sfem.uiView.VerticalScrollView>
+</LinearLayout>

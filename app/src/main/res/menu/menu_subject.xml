@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <!--<item-->
+        <!--android:id="@+id/action_qq"-->
+        <!--android:title="QQ群"-->
+        <!--android:icon="@drawable/ic_qq"-->
+        <!--android:tint="@android:color/white"-->
+        <!--app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/action_subject"
+        android:title="科目"
+        android:icon="@drawable/ic_subject"
+        android:tint="@android:color/white"
+        app:showAsAction="always" />
+
+</menu>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginvm"
+            type="cc.nufe.tools.ui.LoginViewModel" />
+    </data>
+    <!--  以下是所有布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.LoginActivity">
+
+        <EditText
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="手机号"
+            android:text="@={loginvm._str}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->loginvm.certification()}"
+            android:text="@{loginvm._btn}" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->loginvm.searchPost()}"
+            android:text="@{loginvm._post}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->loginvm.searchScore()}"
+            android:text="@{loginvm._score}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->loginvm.searchExam()}"
+            android:text="@{loginvm._exam}" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->loginvm.addqq()}"
+                android:text="@{loginvm._qq}" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->loginvm.goweb()}"
+                android:text="@{loginvm._web}" />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:text="感谢三年来黎然与黄丽君同学所做的贡献，该软件由原团队提供技术支持，将于2024年停用，感谢您的支持"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>
+
